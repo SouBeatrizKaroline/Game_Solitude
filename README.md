@@ -2,6 +2,18 @@
 
 Cópia independente de [GameDevToolkit2023_Solitude](https://github.com/SouBeatrizKaroline/GameDevToolkit2023_Solitude), com o histórico e os créditos originais preservados.
 
+## Imagens do jogo
+
+Capturas da versão original de Solitude, publicada no [itch.io](https://beatrizkcs.itch.io/solitude). As melhorias desta cópia ainda precisam de novas capturas após a compilação no Unity.
+
+![Solitude — captura de tela 1](https://img.itch.zone/aW1hZ2UvMTg4OTI0Ni8xMTEwMzk1NS5wbmc=/original/pYr4D5.png)
+
+![Solitude — captura de tela 2](https://img.itch.zone/aW1hZ2UvMTg4OTI0Ni8xMTEwNTY5Ny5wbmc=/original/38dvad.png)
+
+![Solitude — captura de tela 3](https://img.itch.zone/aW1hZ2UvMTg4OTI0Ni8xMTEwNTY5OC5wbmc=/original/KsSie4.png)
+
+![Solitude — captura de tela 4](https://img.itch.zone/aW1hZ2UvMTg4OTI0Ni8xMTEwNTcwMy5wbmc=/original/RxO9fb.png)
+
 ## Melhorias desta versão
 
 - Movimento aplicado no ciclo da física e detecção do chão por contatos reais, evitando considerar paredes ou o próprio personagem como chão.
@@ -43,14 +55,6 @@ Consulte [VALIDACAO.md](VALIDACAO.md) para o roteiro de teste manual.
 ---
 
 # Game Dev Toolkit
-
-![preview](https://img.itch.zone/aW1hZ2UvMTg4OTI0Ni8xMTEwMzk1NS5wbmc=/original/pYr4D5.png)
-
-![preview](https://img.itch.zone/aW1hZ2UvMTg4OTI0Ni8xMTEwNTY5Ny5wbmc=/original/38dvad.png)
-
-![preview](https://img.itch.zone/aW1hZ2UvMTg4OTI0Ni8xMTEwNTY5OC5wbmc=/original/KsSie4.png)
-
-![preview](https://img.itch.zone/aW1hZ2UvMTg4OTI0Ni8xMTEwNTcwMy5wbmc=/original/RxO9fb.png)
 
 > Solitude
 
