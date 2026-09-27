@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class KeeperController : MonoBehaviour
@@ -8,39 +6,30 @@ public class KeeperController : MonoBehaviour
     public Transform skin;
     public bool goRight;
     public CapsuleCollider2D keeperCollider = null;
-
     public float speed = 1;
+    private Vector3 startPoint, endPoint;
+    private SpriteRenderer sprite;
 
-    // Start is called before the first frame update
     void Start()
     {
+        if (pontoA == null || pontoB == null)
+        {
+            Debug.LogWarning("Patrulha sem pontos A/B: " + name, this);
+            enabled = false;
+            return;
+        }
+        // Store world positions so child waypoints do not move with the enemy.
+        startPoint = pontoA.position;
+        endPoint = pontoB.position;
+        sprite = skin != null ? skin.GetComponent<SpriteRenderer>() : null;
         goRight = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        WalkForSides(); 
-    }
-    void WalkForSides()
-    {
-        if (goRight == true)
-        {
-            if (Vector2.Distance(transform.position, pontoB.position) < 0.2f)
-            {
-                goRight = false;
-            }
-            skin.GetComponent<SpriteRenderer>().flipX = false;
-            transform.position = Vector2.MoveTowards(transform.position, pontoB.position, speed * Time.deltaTime);
-        }
-        else
-        {
-            if (Vector2.Distance(transform.position, pontoA.position) > 0.2f)
-            {
-                goRight = true;
-            }
-            skin.GetComponent<SpriteRenderer>().flipX = true;
-            transform.position = Vector2.MoveTowards(transform.position, pontoA.position, speed * Time.deltaTime);
-        }
+        Vector3 target = goRight ? endPoint : startPoint;
+        if (sprite != null) sprite.flipX = target.x < transform.position.x;
+        transform.position = Vector3.MoveTowards(transform.position, target, Mathf.Max(0f, speed) * Time.deltaTime);
+        if (Vector2.Distance(transform.position, target) < 0.02f) goRight = !goRight;
     }
 }

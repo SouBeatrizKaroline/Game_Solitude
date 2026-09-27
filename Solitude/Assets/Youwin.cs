@@ -7,9 +7,10 @@ public class Youwin : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("Player") && Time.timeScale > 0f)
         {
-            SceneManager.LoadScene(2);
+            Time.timeScale = 1f;
+            SceneManager.LoadScene("final");
         }
     }
 }

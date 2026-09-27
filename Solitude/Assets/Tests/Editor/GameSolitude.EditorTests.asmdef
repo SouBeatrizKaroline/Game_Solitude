@@ -1,0 +1,5 @@
+{
+  "name": "GameSolitude.EditorTests",
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"]
+}
